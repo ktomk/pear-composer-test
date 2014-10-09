@@ -2,8 +2,17 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
-$request = new HTTP_Request2();
-var_dump($request);
+// list include path paths
+$paths = explode(PATH_SEPARATOR, $path = get_include_path());
+var_dump($path);
+printf("include_path has %d path(s):\n", count($paths));
+foreach ($paths as $i => $path) {
+    printf(" # %02d '%s'\n", $i, $path);
+}
+echo "\n";
 
-$url = new Net_URL2('');
-var_dump($url);
+// do something with the required libraries
+$request = new HTTP_Request2();
+var_dump(get_class($request));
+$url     = new Net_URL2('');
+var_dump(get_class($url));
