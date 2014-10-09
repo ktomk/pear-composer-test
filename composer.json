@@ -1,0 +1,13 @@
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "file://c:/Users/DB/PhpstormProjects/Net_URL2/.git"
+        }
+    ],
+    "minimum-stability": "beta",
+    "require": {
+        "pear/net_url2": "dev-topics/composer-for-pear as 2.0.x-dev",
+        "pear/http_request2": "~2.2"
+    }
+}
